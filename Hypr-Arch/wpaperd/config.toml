@@ -1,0 +1,15 @@
+[default]
+duration = "30m"
+sorting = "random"
+mode = "fit"
+queue-size = 10
+transition-time = 300
+initial-transition = true
+
+[DP-1]
+path = "/home/mym/Pictures/wallpapers"
+recursive = true
+
+[DP-2]
+path = "/home/mym/Pictures/wallpapers"
+recursive = true

@@ -1,0 +1,59 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 36,
+  "margin": "6 8 0 8",
+  "spacing": 10,
+
+  "modules-left": ["custom/activities", "custom/wallpaper", "hyprland/workspaces"],
+  "modules-center": ["clock"],
+  "modules-right": ["network", "pulseaudio", "tray", "custom/power"],
+
+  "custom/activities": {
+    "format": "󰀻",
+    "tooltip": "Activities",
+    "on-click": "~/.config/waybar/scripts/activities.sh"
+  },
+
+  "custom/wallpaper": {
+    "format": "",
+    "tooltip": "Wallpaper",
+    "on-click": "~/.config/hypr/scripts/wpaperd-menu.sh"
+  },
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "on-click": "activate",
+    "sort-by-number": true,
+    "all-outputs": true,
+    "persistent-workspaces": { "*": [1, 2, 3, 4, 5] },
+    "format-icons": { "default": "●", "active": "●", "empty": "○" }
+  },
+
+  "clock": {
+    "format": "{:%a %b %d  %I:%M %p}",
+    "format-alt": "{:%Y-%m-%d  %H:%M:%S}"
+  },
+
+  "network": {
+    "format-wifi": "󰤨  {essid}",
+    "format-ethernet": "󰈀  Wired",
+    "format-disconnected": "󰤭  Offline"
+  },
+
+  "pulseaudio": {
+    "format": "󰕾  {volume}%",
+    "format-muted": "󰖁  Muted",
+    "scroll-step": 5
+  },
+
+  "tray": { "spacing": 10 },
+
+  "custom/power": {
+    "format": "⏻",
+    "tooltip": "Power",
+    "on-click": "~/.config/waybar/scripts/power.sh",
+    "on-click-right": "hyprlock"
+  }
+}
+
